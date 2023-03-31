@@ -1,0 +1,43 @@
+<header>
+    <div class="container-fluid">
+        <div class="container-lg">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex py-4">
+                    <a href="{{ 'homepage'|page }}" class="d-flex align-items-center">
+                        <img src="{{ 'assets/images/logo.svg'|theme }}" alt="logo">
+                    </a>
+                </div>
+
+                <div class="d-none d-lg-flex justify-content-center mx-5 align-self-stretch">
+                    {% component "mainmenu" %}
+                </div>
+
+                <div class="d-none d-lg-block">
+                    <div class="socials d-flex align-items-center gap-2">
+                        {% if this.theme.facebook %}
+                            <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-facebook-logo"></i>
+                            </a>
+                        {% endif %}
+
+                        {% if this.theme.instagram %}
+                            <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-instagram-logo"></i>
+                            </a>
+                        {% endif %}
+
+                        {% if this.theme.youtube %}
+                            <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none">
+                                <i class="ph ph-youtube-logo"></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+
+{#                <div class="text-end d-lg-none">#}
+{#                    <a href="#offcanvas" data-bs-toggle="offcanvas" class="bg-tertiary mi-hamburger"></a>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</header>

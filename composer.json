@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/atomic-theme",
+    "type": "october-theme",
+    "description": "Atomic design skeleton theme.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$blue:                              #0d6efd;
+$green:                             #198754;
+$yellow:                            #ffc107;
+$red:                               #d7182a;
+$cyan:                              #0dcaf0;
+$white:                             #ffffff;
+$black:                             #000000;
+
+$gray-100:                          #f8f9fa;
+$gray-200:                          #ebeef3;
+$gray-500:                          #98a0a8;
+
+$primary:                           $blue;
+$secondary:                         $gray-500;
+
+$font-family-sans-serif:            "Inter", sans-serif;
+$font-family-base:                  $font-family-sans-serif;
+
+$font-size-sm:                      0.8125rem;  // 13px
+$font-size-base:                    0.9375rem;  // 15px
+$font-size-lg:                      1.125rem;   // 18px
+
+$line-height-base:                  1.5;
+
+$h1-font-size:                      2.5rem;     // 40px
+$h2-font-size:                      2rem;       // 32px
+$h3-font-size:                      1.75rem;    // 28px
+$h4-font-size:                      1.5rem;     // 24px
+$h5-font-size:                      1.25rem;    // 20px
+
+$body-bg:                           $gray-200;
+
+$border-radius:                     4px;
+
+$btn-border-radius-sm:              $border-radius;
+$btn-border-radius:                 $border-radius;
+$btn-border-radius-lg:              $border-radius;
+$btn-padding-x:                     16px;
+$btn-padding-y:                     12px;
+$btn-padding-x-sm:                  $btn-padding-x;
+$btn-padding-y-sm:                  $btn-padding-y;
+$btn-padding-x-lg:                  $btn-padding-x;
+$btn-padding-y-lg:                  $btn-padding-y;
+
+$link-color:                        $primary;
+$link-hover-color:                  shade-color($link-color, 20%);
+
+$nav-link-color:                    $black;
+$nav-link-hover-color:              $link-hover-color;
+$nav-link-padding-x:                0;
+$nav-link-padding-y:                0;
+$nav-link-submenu-toggler-color:    $gray-500;
+$nav-link-font-size:                $font-size-base;
+$nav-pills-link-active-color:       $gray-500;
+$nav-pills-link-active-bg:          transparent;
+
+$nav-level-1-bg:                    $white;
+$nav-level-1-padding-x:             5px;
+$nav-level-1-padding-y:             5px;
+$nav-level-1-min-width:             300px;
+$nav-level-1-link-color:            $nav-link-color;
+$nav-level-1-link-hover-color:      $primary;
+$nav-level-1-link-hover-bg:         transparent;
+$nav-level-1-link-active-color:     $primary;
+$nav-level-1-link-active-bg:        $gray-200;
+$nav-level-1-link-padding-x:        13px;
+$nav-level-1-link-padding-y:        10px;
+
+$header-bg:                         $white;
+
+$header-socials-link-color:         $nav-link-color;
+$header-socials-link-hover-color:   $nav-link-hover-color;
+$header-socials-font-size:          $nav-link-font-size * 1.5;
+
+$enable-shadows:                    true;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/nav";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "~bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+.btn-outline-secondary {
+    @include button-outline-variant(
+        $body-color,            // color
+        $body-color,            // hover color
+        $blue-100,              // hover + active background
+        $blue-200,              // hover + active border
+    );
+
+    --bs-btn-border-color:      #{$blue-200};
+}
+
+.btn-link {
+    --bs-btn-color:             #{$body-color};
+    --bs-btn-hover-color:       #{$gray-500};
+    --bs-btn-active-color:      #{$gray-500};
+
+    &:hover {
+        text-decoration:        none;
+    }
+}

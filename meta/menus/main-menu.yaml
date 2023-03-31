@@ -1,0 +1,42 @@
+items:
+    -
+        title: Úvod
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: uvod
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Atomy
+        nesting: null
+        type: url
+        url: /atomy
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: Buttony
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: buttony
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+name: 'Main menu'

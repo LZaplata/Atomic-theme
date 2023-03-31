@@ -1,0 +1,78 @@
+header
+    background-color: $header-bg
+
+    .nav
+        &.root
+            & > li
+                position: relative
+                height: 100%
+
+                & > a
+                    &:after
+                        content: ""
+                        width: 0
+                        height: 1px
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        background-color: $nav-pills-link-active-color
+                        transition: $transition-base
+
+                    &:not(.active)
+                        &:hover, &:focus, &:active
+                            &:after
+                                width: 100%
+                                background-color: $nav-link-hover-color
+
+                    &.active
+                        &:after
+                            width: 100%
+
+                .submenu-toggler
+                    color: $nav-link-submenu-toggler-color
+
+                &:hover
+                    & > .submenu
+                        max-height: 300px
+
+                & > .submenu
+                    position: absolute
+                    top: 100%
+                    background-color: $nav-level-1-bg
+                    max-height: 0
+                    overflow: hidden
+                    transition: $transition-base
+                    min-width: $nav-level-1-min-width
+                    border-end-start-radius: $border-radius-lg
+                    border-end-end-radius: $border-radius-lg
+
+                    //@if $nav-level-1-bg == transparent
+                    //    @include box-shadow($box-shadow)
+                    //@else if $nav-level-1-bg == $body-bg
+                    //    @include box-shadow($box-shadow)
+
+                    & > ul
+                        padding: $nav-level-1-padding-y $nav-level-1-padding-x $nav-level-1-padding-y $nav-level-1-padding-x
+
+                        & > li
+                            & > a
+                                width: 100%
+                                color: $nav-level-1-link-color
+                                padding: $nav-level-1-link-padding-y $nav-level-1-link-padding-x $nav-level-1-link-padding-y $nav-level-1-link-padding-x
+
+                                &:not(.active)
+                                    &:hover, &:focus, &:active
+                                        color: $nav-level-1-link-hover-color
+                                        background-color: $nav-level-1-link-hover-bg
+
+                                &.active
+                                    color: $nav-level-1-link-active-color
+                                    background-color: $nav-level-1-link-active-bg
+
+    .socials
+        a
+            color: $header-socials-link-color
+            font-size: $header-socials-font-size
+
+            &:hover, &:focus, &:active
+                color: $header-socials-link-hover-color

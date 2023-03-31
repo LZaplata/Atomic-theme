@@ -1,0 +1,29 @@
+name: Atomic
+description: 'Atomic design skeleton theme.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: atomic
+parent: ''
+database: '0'
+require:
+    - initbiz.seostorm
+    - rainlab.pages
+form:
+    tabs:
+        fields:
+            facebook:
+                label: Facebook
+                type: text
+                span: left
+                tab: Sociální sítě
+            instagram:
+                label: Instagram
+                type: text
+                span: right
+                tab: Sociální sítě
+            youtube:
+                label: Youtube
+                type: text
+                span: left
+                tab: Sociální sítě
