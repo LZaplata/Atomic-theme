@@ -47,6 +47,9 @@ $btn-padding-x-sm:                  $btn-padding-x;
 $btn-padding-y-sm:                  $btn-padding-y;
 $btn-padding-x-lg:                  $btn-padding-x;
 $btn-padding-y-lg:                  $btn-padding-y;
+$btn-box-shadow:                    none;
+$btn-focus-box-shadow:              none;
+$btn-active-box-shadow:             none;
 
 $link-color:                        $primary;
 $link-hover-color:                  shade-color($link-color, 20%);
